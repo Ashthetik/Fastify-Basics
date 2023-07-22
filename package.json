@@ -3,10 +3,13 @@
   "version": "0.5.1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "clear && tsc",
+    "start": "npx pm2 start dist/main.js --name Sierra --watch",
+    "restart": "npx pm2 restart Sierra",
+    "stop": "npx pm2 stop Sierra"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ashthetik",
+  "license": "Comman-Clause",
   "keywords": [],
   "description": "",
   "dependencies": {
@@ -17,6 +20,7 @@
   "devDependencies": {
     "@fastify/websocket": "^8.2.0",
     "@types/node": "^20.4.3",
-    "@types/ws": "^8.5.5"
+    "@types/ws": "^8.5.5",
+    "pm2": "^5.3.0"
   }
 }
